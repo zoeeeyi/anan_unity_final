@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9169305585630266493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1200142886799338, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_Name
+      value: Bath_Towel_Floor Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_RootOrder
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -11.439999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -28.279999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.94354516
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.33124396
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818802848230912, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d26c39ce807690e4a982e24a5e9c1ade, type: 3}
