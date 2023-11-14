@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 23935742}
   - component: {fileID: 23935741}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 23935742}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009175101}
+        m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &23935742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,50 +524,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582079775}
   m_CullTransparentMesh: 1
---- !u!1 &765545821
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 765545823}
-  - component: {fileID: 765545822}
-  m_Layer: 0
-  m_Name: Button Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &765545822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765545821}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ca604828ecdb7b43a27b6d18dd7e54d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &765545823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765545821}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &797408211
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +537,7 @@ GameObject:
   - component: {fileID: 797408214}
   - component: {fileID: 797408213}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: Up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,14 +607,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1009175101}
+        m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -937,6 +905,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009175100}
+  - component: {fileID: 1009175101}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -959,6 +928,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1009175101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009175099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7a4b7ef1dec89c4da8a2cf330ac75ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_possibleTimeBetweenPops: {x: 2, y: 3}
+  m_possibleStayTime: {x: 2, y: 3}
+  m_scoreText: {fileID: 1008245427}
+  m_buttonList:
+  - {fileID: 1973038892}
+  - {fileID: 797408213}
+  - {fileID: 23935741}
+  - {fileID: 1986401726}
 --- !u!1 &1196763936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,7 +1476,7 @@ GameObject:
   - component: {fileID: 1973038893}
   - component: {fileID: 1973038892}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1557,10 +1546,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 765545822}
-        m_TargetAssemblyTypeName: ButtonTest, Assembly-CSharp
-        m_MethodName: ButtonPressed
-        m_Mode: 1
+      - m_Target: {fileID: 1009175101}
+        m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1620,7 +1609,7 @@ GameObject:
   - component: {fileID: 1986401727}
   - component: {fileID: 1986401726}
   m_Layer: 5
-  m_Name: Button (4)
+  m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1689,7 +1678,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1986401727}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1009175101}
+        m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+        m_MethodName: OnButtonPressed
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1986401727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1962,6 +1963,5 @@ SceneRoots:
   - {fileID: 1907436785}
   - {fileID: 1526806091}
   - {fileID: 1938792309}
-  - {fileID: 765545823}
   - {fileID: 1740785075}
   - {fileID: 1009175100}
