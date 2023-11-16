@@ -89,7 +89,7 @@ public class WhacAMoleManager : MonoBehaviour
             m_scoreText.text = m_score.ToString();
 
             //Set the status of the button
-            _pressedButton.OnButtonDechosen();
+            _pressedButton.OnButtonDechosen(true);
 
             //Set game state
             StopCoroutine(m_currentGame);
@@ -133,13 +133,15 @@ public class WhacAMoleManager : MonoBehaviour
             assignedAnimator.SetTrigger("Up");
         }
 
-        public void OnButtonDechosen()
+        public void OnButtonDechosen(bool _hit = false)
         {
             isChosen = false;
             assignedButton.colors = m_defaultColorBlock;
 
             //Play crocdile animation
             assignedAnimator.SetTrigger("Down");
+            if (_hit) assignedAnimator.SetTrigger("Hit");
+            else assignedAnimator.SetTrigger("Unhit");
         }
         #endregion
     }
