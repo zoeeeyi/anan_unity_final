@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 23775373368283536}
   - component: {fileID: 65668812423865298}
   - component: {fileID: 82379331879028246}
-  - component: {fileID: 114649969528839188}
   - component: {fileID: 114827348586846290}
   m_Layer: 0
   m_Name: Door
@@ -206,19 +205,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &114649969528839188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1412535891800242}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16f6530fe7067243a80cc3d3e22edb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: 3a97436fb3a112b44b4584736089f501, type: 3}
 --- !u!114 &114827348586846290
 MonoBehaviour:
   m_ObjectHideFlags: 0

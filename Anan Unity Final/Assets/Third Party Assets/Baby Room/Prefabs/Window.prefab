@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 65704427573788570}
   - component: {fileID: 82321148961350792}
   - component: {fileID: 114915914661503976}
-  - component: {fileID: 114282810281191016}
   m_Layer: 0
   m_Name: window
   m_TagString: Untagged
@@ -221,19 +220,6 @@ MonoBehaviour:
   OpenSound: {fileID: 0}
   CloseSound: {fileID: 0}
   DoorWindow: {fileID: 1539961675457738}
---- !u!114 &114282810281191016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404879310546514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e16f6530fe7067243a80cc3d3e22edb4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crosshair: {fileID: 2800000, guid: 3a97436fb3a112b44b4584736089f501, type: 3}
 --- !u!1 &1539961675457738
 GameObject:
   m_ObjectHideFlags: 0

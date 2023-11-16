@@ -11,10 +11,10 @@ public class WhacAMoleManager : MonoBehaviour
     [SerializeField] Vector2 m_possibleTimeBetweenPops;
     [SerializeField] Vector2 m_possibleStayTime;
 
-
     [Header("Backend settings")]
     [SerializeField] TextMeshProUGUI m_scoreText;
     [SerializeField] Button[] m_buttonList;
+    [SerializeField] Animator[] m_crocdileAnimators;
     AssignedButton[] m_assignedButtons;
     AssignedButton m_chosenButton;
     int m_score = 0;
@@ -39,7 +39,7 @@ public class WhacAMoleManager : MonoBehaviour
         //Take the list of buttons and construct class objects for them
         for (int i = 0; i < m_buttonList.Length; i++)
         {
-            m_assignedButtons[i] = new AssignedButton(m_buttonList[i]);
+            m_assignedButtons[i] = new AssignedButton(m_buttonList[i], m_crocdileAnimators[i]);
         }
 
         StartCoroutine(ChooseButton());
@@ -57,7 +57,7 @@ public class WhacAMoleManager : MonoBehaviour
         //Choose a button
         int _buttonIndex = Random.Range(0, m_buttonList.Length);
         m_chosenButton = m_assignedButtons[_buttonIndex];
-        m_assignedButtons[_buttonIndex].OnButtonChosen();
+        m_chosenButton.OnButtonChosen();
 
         //Wait for input
         m_currentGame = WaitForInput();
@@ -108,13 +108,15 @@ public class WhacAMoleManager : MonoBehaviour
     {
         public Button assignedButton { get; private set;}
         public bool isChosen {get; private set;}
+        public Animator assignedAnimator { get; private set;}
         ColorBlock m_defaultColorBlock;
 
-        public AssignedButton(Button _button)
+        public AssignedButton(Button _button, Animator _assignedAnimator)
         {
             assignedButton = _button;
             isChosen = false;
             m_defaultColorBlock = _button.colors;
+            assignedAnimator = _assignedAnimator;
         }
 
         #region Button State Managers
@@ -126,12 +128,18 @@ public class WhacAMoleManager : MonoBehaviour
             ColorBlock _chosenStatusColor = new ColorBlock();
             _chosenStatusColor.normalColor = Color.white;
             _button.colors = _chosenStatusColor;
+
+            //Play crocdile animation
+            assignedAnimator.SetTrigger("Up");
         }
 
         public void OnButtonDechosen()
         {
             isChosen = false;
             assignedButton.colors = m_defaultColorBlock;
+
+            //Play crocdile animation
+            assignedAnimator.SetTrigger("Down");
         }
         #endregion
     }

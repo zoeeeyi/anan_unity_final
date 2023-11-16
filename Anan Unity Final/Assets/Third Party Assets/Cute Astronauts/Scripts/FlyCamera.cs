@@ -27,7 +27,6 @@ public class FlyCamera : MonoBehaviour
 			transform.eulerAngles = mMouseBefore;
 			mMouseBefore =  Input.mousePosition;
 
-			float f = 0.0f;
 			Vector3 p = GetKeyInput();
 			float total_run = 1.0f;
 
