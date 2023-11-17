@@ -329,7 +329,7 @@ GameObject:
   - component: {fileID: 23935742}
   - component: {fileID: 23935741}
   m_Layer: 7
-  m_Name: Right
+  m_Name: Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +406,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1581,6 +1581,7 @@ GameObject:
   - component: {fileID: 502504747}
   - component: {fileID: 502504746}
   - component: {fileID: 502504745}
+  - component: {fileID: 502504748}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -1675,6 +1676,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502504742}
   m_Mesh: {fileID: 4300000, guid: 82ee02b06f0b39e4bb7fdcd1edef9655, type: 3}
+--- !u!95 &502504748
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502504742}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &524953056 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3646232107350205560, guid: 77e8d07836df7eb4cb8cd6a398803bbb, type: 3}
@@ -9034,8 +9056,8 @@ RectTransform:
   m_Children:
   - {fileID: 1973038891}
   - {fileID: 797408212}
-  - {fileID: 23935740}
   - {fileID: 1986401725}
+  - {fileID: 23935740}
   m_Father: {fileID: 1526806091}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -9270,12 +9292,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009175099}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1580832891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1009175101
 MonoBehaviour:
@@ -9289,19 +9311,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7a4b7ef1dec89c4da8a2cf330ac75ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_mode: 1
   m_possibleTimeBetweenPops: {x: 2, y: 3}
   m_possibleStayTime: {x: 2, y: 3}
+  m_fixedStayTime: 0.6
   m_scoreText: {fileID: 1008245427}
   m_buttonList:
   - {fileID: 1973038892}
   - {fileID: 797408213}
-  - {fileID: 23935741}
   - {fileID: 1986401726}
+  - {fileID: 23935741}
   m_crocdileAnimators:
   - {fileID: 415379701}
   - {fileID: 185792474}
-  - {fileID: 1387735456}
   - {fileID: 1668955367}
+  - {fileID: 1387735456}
+  m_gameState: 0
 --- !u!1001 &1020968628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10314,6 +10339,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239129415}
+  - component: {fileID: 1239129417}
+  - component: {fileID: 1239129416}
   m_Layer: 0
   m_Name: Moles
   m_TagString: Untagged
@@ -10329,7 +10356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239129414}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10338,8 +10365,136 @@ Transform:
   - {fileID: 563793484}
   - {fileID: 87703875}
   - {fileID: 1033908853}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1580832891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1239129416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239129414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 276d846b0056e9f40ab1fdfa71dd8767, type: 2}
+    - {fileID: 11400000, guid: 81a7958d515a2c6488d598bef19bbe38, type: 2}
+    - {fileID: 11400000, guid: 3449d25acca60b4419e22b5a22cbbb99, type: 2}
+    - {fileID: 11400000, guid: 063092514ceba9842ac33ac7ab415cac, type: 2}
+    - {fileID: 11400000, guid: 2406e02f1948e2c45a0dd522d2607726, type: 2}
+    - {fileID: 11400000, guid: 897feef14a5df2744865beae18949b72, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: SetGameState
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: SetGameState
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: MoleUp
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: MoleUp
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: MoleUp
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 2
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1009175101}
+          m_TargetAssemblyTypeName: WhacAMoleManager, Assembly-CSharp
+          m_MethodName: MoleUp
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 3
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!320 &1239129417
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239129414}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: dcd82dd543691da45874344db5919647, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -8025847206428751160, guid: dcd82dd543691da45874344db5919647, type: 2}
+    value: {fileID: 1239129416}
+  - key: {fileID: 7864525527527933860, guid: dcd82dd543691da45874344db5919647, type: 2}
+    value: {fileID: 1239129416}
+  - key: {fileID: 2999299837156752931, guid: dcd82dd543691da45874344db5919647, type: 2}
+    value: {fileID: 1239129416}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1264866226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11103,6 +11258,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: xinghuan
       objectReference: {fileID: 0}
+    - target: {fileID: 1297217749764871409, guid: 35f34db002c479c4eb49ac8d0d4d26a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2307645642289147828, guid: 35f34db002c479c4eb49ac8d0d4d26a4, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -11242,7 +11401,7 @@ GameObject:
   - component: {fileID: 1526806089}
   - component: {fileID: 1526806088}
   m_Layer: 0
-  m_Name: Mole Buttons
+  m_Name: Mole Buttons (Hidden)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11328,13 +11487,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526806087}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.18, y: 0.05, z: -0.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 982484373}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1580832891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1533942035
 PrefabInstance:
@@ -11640,6 +11799,42 @@ Transform:
   - {fileID: 918120336}
   m_Father: {fileID: 95852850}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1580832890
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1580832891}
+  m_Layer: 0
+  m_Name: Rhythm Game Core
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1580832891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1580832890}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1526806091}
+  - {fileID: 1009175100}
+  - {fileID: 1634600179}
+  - {fileID: 1772158671}
+  - {fileID: 1239129415}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620260850
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11825,12 +12020,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634600177}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1580832891}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1668955367 stripped
 Animator:
@@ -12437,7 +12632,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1580832891}
     m_Modifications:
     - target: {fileID: 6269484875689550195, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12481,7 +12676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6275320496311609739, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
       propertyPath: m_Name
-      value: Toilet Rubber
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6275320496311609739, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12495,7 +12690,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6288637176473169969, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
+    - {fileID: 6338002527691857591, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
+    - {fileID: 6297853290972009581, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6269484875689550195, guid: ce2d8d4f992ada240b8502f79f1cfece, type: 3}
@@ -13396,7 +13594,7 @@ GameObject:
   - component: {fileID: 1986401727}
   - component: {fileID: 1986401726}
   m_Layer: 7
-  m_Name: Down
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13473,7 +13671,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 3
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -14337,12 +14535,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 2123994717}
   - {fileID: 1907436785}
-  - {fileID: 1526806091}
   - {fileID: 1938792309}
   - {fileID: 1740785075}
-  - {fileID: 1009175100}
-  - {fileID: 1839643060}
-  - {fileID: 1634600179}
-  - {fileID: 1239129415}
   - {fileID: 95852850}
   - {fileID: 64713576}
+  - {fileID: 1580832891}

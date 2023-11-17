@@ -7,9 +7,23 @@ using UnityEngine.UI;
 
 public class WhacAMoleManager : MonoBehaviour
 {
-    [Header("Rule Settings")]
+    #region Game Modes
+    enum GameModes
+    {
+        Classic,
+        Rhythm
+    }
+
+    [SerializeField] GameModes m_mode = GameModes.Classic;
+    #endregion
+
+    #region variables
+    [Header("Classic Mode Settings")]
     [SerializeField] Vector2 m_possibleTimeBetweenPops;
     [SerializeField] Vector2 m_possibleStayTime;
+
+    [Header("Rhythm Mode Settings")]
+    [SerializeField] float m_fixedStayTime;
 
     [Header("Backend settings")]
     [SerializeField] TextMeshProUGUI m_scoreText;
@@ -18,21 +32,25 @@ public class WhacAMoleManager : MonoBehaviour
     AssignedButton[] m_assignedButtons;
     AssignedButton m_chosenButton;
     int m_score = 0;
+    #endregion
 
     #region Whac A Mole State Machine
-    enum WAM_States
+    public enum WAM_States
     {
-        Cooldown,
+        Idle,
         Play
     }
 
-    WAM_States m_state = WAM_States.Cooldown;
+    [HideInInspector] public WAM_States m_gameState = WAM_States.Idle;
+
+    public void SetGameState(int _stateIndex)
+    {
+        m_gameState = (WAM_States) _stateIndex;
+    }
+
     #endregion
 
-    // Randomly choose a button and change color
-    // Random duration for the chosen button
-    // If pressed during the chosen duration, score + 1
-
+    #region Start and Update
     void Start()
     {
         m_assignedButtons = new AssignedButton[m_buttonList.Length];
@@ -42,14 +60,16 @@ public class WhacAMoleManager : MonoBehaviour
             m_assignedButtons[i] = new AssignedButton(m_buttonList[i], m_crocdileAnimators[i]);
         }
 
-        StartCoroutine(ChooseButton());
+        if (m_mode == GameModes.Classic) StartCoroutine(ChooseButton());
     }
+    #endregion
 
-    #region Game State Managers
+    #region Game State Logic (Classic)
+    //Automatically cycle between moles, user set time etc.
     IEnumerator m_currentGame;
     IEnumerator ChooseButton()
     {
-        m_state = WAM_States.Cooldown;
+        m_gameState = WAM_States.Idle;
         m_chosenButton = null;
         float _waitTime = Random.Range(m_possibleTimeBetweenPops.x, m_possibleTimeBetweenPops.y);
         yield return new WaitForSeconds(_waitTime);
@@ -66,7 +86,7 @@ public class WhacAMoleManager : MonoBehaviour
 
     IEnumerator WaitForInput()
     {
-        m_state = WAM_States.Play;
+        m_gameState = WAM_States.Play;
         float _stayTime = Random.Range(m_possibleStayTime.x, m_possibleStayTime.y);
         yield return new WaitForSeconds(_stayTime);
 
@@ -78,11 +98,28 @@ public class WhacAMoleManager : MonoBehaviour
     }
     #endregion
 
+    #region Game State Logic (Rhythm)
+    //Manually set when the mole pops in the timeline, call these functions when needed
+
+    public void MoleUp(int _index)
+    {
+        m_assignedButtons[_index].OnButtonChosen();
+        StartCoroutine(MoleDown(m_assignedButtons[_index]));
+    }
+
+    IEnumerator MoleDown(AssignedButton _button)
+    {
+        yield return new WaitForSeconds(m_fixedStayTime);
+        _button.OnButtonDechosen();
+    }
+
+    #endregion
+
     #region Button Press
     void OnButtonPressed(AssignedButton _pressedButton)
     {
         //Check if the correct button is pressed
-        if(_pressedButton.isChosen == true && m_state == WAM_States.Play)
+        if(_pressedButton.isChosen == true && m_gameState == WAM_States.Play)
         {
             //Update score
             m_score++;
@@ -91,9 +128,12 @@ public class WhacAMoleManager : MonoBehaviour
             //Set the status of the button
             _pressedButton.OnButtonDechosen(true);
 
-            //Set game state
-            StopCoroutine(m_currentGame);
-            StartCoroutine(ChooseButton());
+            //Set game state (Classic Mode)
+            if (m_mode == GameModes.Classic)
+            {
+                StopCoroutine(m_currentGame);
+                StartCoroutine(ChooseButton());
+            }
         }
     }
 
