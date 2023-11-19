@@ -77,10 +77,12 @@ public class WhacAMoleManager : MonoBehaviour
         //Choose a button
         int _buttonIndex = Random.Range(0, m_buttonList.Length);
         m_chosenButton = m_assignedButtons[_buttonIndex];
-        m_chosenButton.OnButtonChosen();
 
         //Wait for input
         m_currentGame = WaitForInput();
+
+        m_chosenButton.OnButtonChosen(m_currentGame);
+
         StartCoroutine(m_currentGame);
     }
 
@@ -103,8 +105,9 @@ public class WhacAMoleManager : MonoBehaviour
 
     public void MoleUp(int _index)
     {
-        m_assignedButtons[_index].OnButtonChosen();
-        StartCoroutine(MoleDown(m_assignedButtons[_index]));
+        IEnumerator _dechosenCoroutine = MoleDown(m_assignedButtons[_index]);
+        m_assignedButtons[_index].OnButtonChosen(_dechosenCoroutine);
+        StartCoroutine(_dechosenCoroutine);
     }
 
     IEnumerator MoleDown(AssignedButton _button)
@@ -126,6 +129,7 @@ public class WhacAMoleManager : MonoBehaviour
             m_scoreText.text = m_score.ToString();
 
             //Set the status of the button
+            StopCoroutine(_pressedButton.coroutineOnButton);
             _pressedButton.OnButtonDechosen(true);
 
             //Set game state (Classic Mode)
@@ -149,6 +153,8 @@ public class WhacAMoleManager : MonoBehaviour
         public Button assignedButton { get; private set;}
         public bool isChosen {get; private set;}
         public Animator assignedAnimator { get; private set;}
+
+        public IEnumerator coroutineOnButton { get; private set; }
         ColorBlock m_defaultColorBlock;
 
         public AssignedButton(Button _button, Animator _assignedAnimator)
@@ -160,9 +166,11 @@ public class WhacAMoleManager : MonoBehaviour
         }
 
         #region Button State Managers
-        public void OnButtonChosen()
+        public void OnButtonChosen(IEnumerator _dechosenCoroutine)
         {
             isChosen = true;
+            coroutineOnButton = _dechosenCoroutine;
+
             //Change button color to white
             assignedButton.TryGetComponent(out Button _button);
             ColorBlock _chosenStatusColor = new ColorBlock();
