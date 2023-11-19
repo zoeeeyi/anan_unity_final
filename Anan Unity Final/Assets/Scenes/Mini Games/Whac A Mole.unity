@@ -9888,6 +9888,12 @@ MonoBehaviour:
   - {fileID: 1668955367}
   - {fileID: 1387735456}
   m_gameState: 0
+  WAM_Idle:
+    m_PersistentCalls:
+      m_Calls: []
+  WAM_Play:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1020968628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12926,6 +12932,9 @@ MonoBehaviour:
   m_lowerBound: {fileID: 714946303}
   m_leftBound: {fileID: 1223226987}
   m_rightBound: {fileID: 1076004620}
+  m_gm: {fileID: 1009175101}
+  m_mesh: {fileID: 502504746}
+  m_transparentColor: {r: 1, g: 1, b: 1, a: 0.3254902}
 --- !u!4 &1634600179
 Transform:
   m_ObjectHideFlags: 0

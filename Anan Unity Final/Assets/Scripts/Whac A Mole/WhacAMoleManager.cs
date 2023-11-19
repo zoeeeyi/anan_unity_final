@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class WhacAMoleManager : MonoBehaviour
 {
@@ -42,10 +43,23 @@ public class WhacAMoleManager : MonoBehaviour
     }
 
     [HideInInspector] public WAM_States m_gameState = WAM_States.Idle;
+    [HideInInspector] public UnityEvent WAM_Idle;
+    [HideInInspector] public UnityEvent WAM_Play;
 
     public void SetGameState(int _stateIndex)
     {
         m_gameState = (WAM_States) _stateIndex;
+
+        switch(m_gameState)
+        {
+            case WAM_States.Idle:
+                WAM_Idle.Invoke();
+                break;
+
+            case WAM_States.Play:
+                WAM_Play.Invoke();
+                break;
+        }
     }
 
     #endregion

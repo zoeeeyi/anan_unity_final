@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static RootMotion.FinalIK.HitReaction;
 
@@ -18,6 +19,23 @@ public class MouseFollow : MonoBehaviour
     [SerializeField] Transform m_leftBound;
     [SerializeField] Transform m_rightBound;
 
+    [Space]
+    [SerializeField] WhacAMoleManager m_gm;
+    [SerializeField] MeshRenderer m_mesh;
+    [SerializeField] Color m_transparentColor;
+    Color m_startColor;
+
+    private void Awake()
+    {
+        m_startColor = m_mesh.materials[0].color;
+        m_gm.WAM_Idle.AddListener(delegate { SetTransparent(true); });
+        m_gm.WAM_Play.AddListener(delegate { SetTransparent(false); });
+    }
+
+    void SetTransparent(bool _yesOrNo)
+    {
+        m_mesh.materials[0].color = (_yesOrNo) ? m_transparentColor : m_startColor;
+    }
 
     private void Start()
     {
