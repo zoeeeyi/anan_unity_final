@@ -5,6 +5,7 @@ using static RootMotion.FinalIK.HitReaction;
 
 public class MouseFollow : MonoBehaviour
 {
+    [SerializeField] bool m_cursorVisibility = false;
     [SerializeField] GameObject m_toiletSucker;
     [SerializeField] Animator m_toiletSuckerAnimator;
     [SerializeField] float m_zOffset;
@@ -22,7 +23,7 @@ public class MouseFollow : MonoBehaviour
     {
         m_startYPos = m_toiletSucker.transform.position.y;
         groundPlane = new Plane(Vector3.up, Vector3.zero);
-        Cursor.visible = false;
+        Cursor.visible = m_cursorVisibility;
     }
 
     void Update()
