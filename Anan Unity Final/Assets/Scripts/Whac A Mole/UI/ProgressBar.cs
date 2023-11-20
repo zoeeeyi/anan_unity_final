@@ -13,6 +13,11 @@ public class ProgressBar : MonoBehaviour
         m_gm.WAM_Score_onScore.AddListener(UpdateProgressBar);
     }
 
+    private void Start()
+    {
+        m_progressBarMain.value = 1;
+    }
+
     void UpdateProgressBar()
     {
         //Progress Bar move from value 1 to 0
