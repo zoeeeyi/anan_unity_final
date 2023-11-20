@@ -138,6 +138,7 @@ public class WhacAMoleManager : MonoBehaviour
         //Check if the correct button is pressed
         if(_pressedButton.isChosen == true && m_gameState == WAM_States.Play)
         {
+            _pressedButton.assignedButton.GetComponent<HitSound>().PlayCrocdileHitSound();
             //Update score
             m_score++;
             m_scoreText.text = m_score.ToString();

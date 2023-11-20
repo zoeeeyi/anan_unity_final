@@ -22,19 +22,29 @@ public class MouseFollow : MonoBehaviour
     [Space]
     [SerializeField] WhacAMoleManager m_gm;
     [SerializeField] MeshRenderer m_mesh;
+    [SerializeField] Material m_opaqueMat;
+    [SerializeField] Material m_transMat;
     [SerializeField] Color m_transparentColor;
     Color m_startColor;
 
     private void Awake()
     {
-        m_startColor = m_mesh.materials[0].color;
+        m_startColor = m_mesh.material.color;
         m_gm.WAM_Idle.AddListener(delegate { SetTransparent(true); });
         m_gm.WAM_Play.AddListener(delegate { SetTransparent(false); });
     }
 
     void SetTransparent(bool _yesOrNo)
     {
-        m_mesh.materials[0].color = (_yesOrNo) ? m_transparentColor : m_startColor;
+        if (_yesOrNo)
+        {
+            m_mesh.material = m_transMat;
+            m_mesh.material.color = m_transparentColor;
+        } else
+        {
+            m_mesh.material = m_opaqueMat;
+            m_mesh.material.color = m_startColor;
+        }
     }
 
     private void Start()
