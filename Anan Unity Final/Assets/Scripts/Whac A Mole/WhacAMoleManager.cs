@@ -34,7 +34,6 @@ public class WhacAMoleManager : MonoBehaviour
     [SerializeField] Animator[] m_crocdileAnimators;
     AssignedButton[] m_assignedButtons;
     AssignedButton m_chosenButton;
-    int m_score = 0;
     #endregion
 
     #region Whac A Mole State Machine
@@ -160,6 +159,16 @@ public class WhacAMoleManager : MonoBehaviour
 
     [Header("Score System")]
     [SerializeField] int m_winScore = 5;
+    int m_score = 0;
+    public float GetWinScore()
+    {
+        return m_winScore;
+    }
+
+    public float GetCurrentScore()
+    {
+        return m_score;
+    }
 
     void Score()
     {
