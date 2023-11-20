@@ -53,6 +53,10 @@ public class MouseFollow : MonoBehaviour
         //Set VFX events
         m_gm.WAM_Score_onMiss.AddListener(PlayWaterSplash);
         m_gm.WAM_Score_onScore.AddListener(PlayHitParticle);
+
+        //Set end game
+        m_gm.WAM_Win.AddListener(delegate { SetPlayerActive(false); });
+        m_gm.WAM_Lose.AddListener(delegate { SetPlayerActive(false); });
     }
 
     void SetTransparent(bool _yesOrNo)
@@ -68,6 +72,7 @@ public class MouseFollow : MonoBehaviour
         }
     }
 
+    #region Start and Update
     private void Start()
     {
         m_startYPos = m_toiletSucker.transform.position.y;
@@ -112,6 +117,7 @@ public class MouseFollow : MonoBehaviour
             m_toiletSuckerAnimator.SetTrigger("Press");
         }
     }
+    #endregion
 
     #region VFX controls
     void PlayWaterSplash()
@@ -129,4 +135,9 @@ public class MouseFollow : MonoBehaviour
         m_toiletParticle.Play();
     }
     #endregion
+
+    void SetPlayerActive(bool _yesOrNo = false)
+    {
+        m_toiletSucker.gameObject.SetActive(_yesOrNo);
+    }
 }

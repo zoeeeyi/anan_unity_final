@@ -41,12 +41,15 @@ public class WhacAMoleManager : MonoBehaviour
     public enum WAM_States
     {
         Idle,
-        Play
+        Play,
+        End
     }
 
     [HideInInspector] public WAM_States m_gameState = WAM_States.Idle;
     [HideInInspector] public UnityEvent WAM_Idle;
     [HideInInspector] public UnityEvent WAM_Play;
+    [HideInInspector] public UnityEvent WAM_Win;
+    [HideInInspector] public UnityEvent WAM_Lose;
 
     public void SetGameState(int _stateIndex)
     {
@@ -60,6 +63,11 @@ public class WhacAMoleManager : MonoBehaviour
 
             case WAM_States.Play:
                 WAM_Play.Invoke();
+                break;
+
+            case WAM_States.End:
+                WAM_Idle.Invoke();
+                OnGameEnd();
                 break;
         }
     }
@@ -150,6 +158,9 @@ public class WhacAMoleManager : MonoBehaviour
     [HideInInspector] public UnityEvent WAM_Score_onScore;
     [HideInInspector] public UnityEvent WAM_Score_onMiss;
 
+    [Header("Score System")]
+    [SerializeField] int m_winScore = 5;
+
     void Score()
     {
         //Update score
@@ -162,6 +173,13 @@ public class WhacAMoleManager : MonoBehaviour
     void Miss()
     {
         WAM_Score_onMiss.Invoke();
+    }
+
+    void OnGameEnd()
+    {
+        //Determine Winning or Losing
+        if (m_score >= m_winScore) WAM_Win.Invoke();
+        else WAM_Lose.Invoke();
     }
     #endregion
 
