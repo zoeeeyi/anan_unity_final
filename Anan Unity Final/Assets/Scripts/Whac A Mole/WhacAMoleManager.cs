@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 public class WhacAMoleManager : MonoBehaviour
 {
@@ -76,6 +78,18 @@ public class WhacAMoleManager : MonoBehaviour
 
         if (m_mode == GameModes.Classic) StartCoroutine(ChooseButton());
     }
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0) && m_gameState == WAM_States.Play)
+        {
+            // Check if the click is over a UI element
+            if (!EventSystem.current.IsPointerOverGameObject())
+            {
+                Miss();
+            }
+        }
+    }
     #endregion
 
     #region Game State Logic (Classic)
@@ -132,6 +146,25 @@ public class WhacAMoleManager : MonoBehaviour
 
     #endregion
 
+    #region Score System
+    [HideInInspector] public UnityEvent WAM_Score_onScore;
+    [HideInInspector] public UnityEvent WAM_Score_onMiss;
+
+    void Score()
+    {
+        //Update score
+        m_score++;
+        m_scoreText.text = m_score.ToString();
+
+        WAM_Score_onScore.Invoke();
+    }
+
+    void Miss()
+    {
+        WAM_Score_onMiss.Invoke();
+    }
+    #endregion
+
     #region Button Press
     void OnButtonPressed(AssignedButton _pressedButton)
     {
@@ -139,9 +172,9 @@ public class WhacAMoleManager : MonoBehaviour
         if(_pressedButton.isChosen == true && m_gameState == WAM_States.Play)
         {
             _pressedButton.assignedButton.GetComponent<HitSound>().PlayCrocdileHitSound();
-            //Update score
-            m_score++;
-            m_scoreText.text = m_score.ToString();
+
+            //Score system
+            Score();
 
             //Set the status of the button
             StopCoroutine(_pressedButton.coroutineOnButton);
@@ -153,6 +186,10 @@ public class WhacAMoleManager : MonoBehaviour
                 StopCoroutine(m_currentGame);
                 StartCoroutine(ChooseButton());
             }
+        }
+        else if (m_gameState == WAM_States.Play)
+        {
+            Miss();
         }
     }
 

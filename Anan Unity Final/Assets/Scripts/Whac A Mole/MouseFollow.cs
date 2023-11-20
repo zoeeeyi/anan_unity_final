@@ -2,25 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using static RootMotion.FinalIK.HitReaction;
 
 public class MouseFollow : MonoBehaviour
 {
+    [Header("Toilet Sucker Properties")]
     [SerializeField] bool m_cursorVisibility = false;
     [SerializeField] GameObject m_toiletSucker;
     [SerializeField] Animator m_toiletSuckerAnimator;
     [SerializeField] float m_zOffset;
-    [SerializeField] ParticleSystem m_toiletParticle;
+
     float m_startYPos;
     Plane groundPlane;
 
+    [Header("Mouse Move Bounds")]
     [SerializeField] Transform m_upBound;
     [SerializeField] Transform m_lowerBound;
     [SerializeField] Transform m_leftBound;
     [SerializeField] Transform m_rightBound;
 
+    [Header("Pool Bounds")]
+    [SerializeField] Transform m_poolUpBound;
+    [SerializeField] Transform m_poolLowerBound;
+    [SerializeField] Transform m_poolLeftBound;
+    [SerializeField] Transform m_poolRightBound;
+
     [Space]
     [SerializeField] WhacAMoleManager m_gm;
+
+    [Header("VFX")]
+    [SerializeField] ParticleSystem m_toiletParticle;
+    [SerializeField] GameObject m_waterSplash;
+    [SerializeField] Transform m_waterSplashPosition;
+
+    [Header("Material Settings")]
     [SerializeField] MeshRenderer m_mesh;
     [SerializeField] Material m_opaqueMat;
     [SerializeField] Material m_transMat;
@@ -29,9 +45,14 @@ public class MouseFollow : MonoBehaviour
 
     private void Awake()
     {
+        //Set toilet sucker materials
         m_startColor = m_mesh.material.color;
         m_gm.WAM_Idle.AddListener(delegate { SetTransparent(true); });
         m_gm.WAM_Play.AddListener(delegate { SetTransparent(false); });
+
+        //Set VFX events
+        m_gm.WAM_Score_onMiss.AddListener(PlayWaterSplash);
+        m_gm.WAM_Score_onScore.AddListener(PlayHitParticle);
     }
 
     void SetTransparent(bool _yesOrNo)
@@ -86,11 +107,26 @@ public class MouseFollow : MonoBehaviour
         m_toiletSucker.transform.position = new Vector3(_newPos.x, m_startYPos, _newPos.z);
 
         //Pressing mouse
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && m_gm.m_gameState == WhacAMoleManager.WAM_States.Play)
         {
             m_toiletSuckerAnimator.SetTrigger("Press");
-            m_toiletParticle.Clear();
-            m_toiletParticle.Play();
         }
     }
+
+    #region VFX controls
+    void PlayWaterSplash()
+    {
+        Vector3 _playerPos = m_toiletSucker.transform.position;
+        bool _outOfXBound = (_playerPos.x < m_poolLeftBound.position.x) || (_playerPos.x > m_poolRightBound.position.x);
+        bool _outOfZBound = (_playerPos.z < m_poolLowerBound.position.z) || (_playerPos.z > m_poolUpBound.position.z);
+
+        if (!_outOfXBound && !_outOfZBound) Instantiate(m_waterSplash, m_waterSplashPosition.position, Quaternion.identity);
+    }
+
+    void PlayHitParticle()
+    {
+        m_toiletParticle.Clear();
+        m_toiletParticle.Play();
+    }
+    #endregion
 }
