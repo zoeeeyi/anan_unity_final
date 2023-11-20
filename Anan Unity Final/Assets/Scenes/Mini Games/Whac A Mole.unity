@@ -6068,7 +6068,7 @@ MonoBehaviour:
   WAM_Score_onMiss:
     m_PersistentCalls:
       m_Calls: []
-  m_winScore: 6
+  m_winScore: 12
 --- !u!1 &1016895552
 GameObject:
   m_ObjectHideFlags: 0
