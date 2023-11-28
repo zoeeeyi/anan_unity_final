@@ -2,23 +2,41 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: VFX_Pandavfx_v2.3
   m_Shader: {fileID: 4800000, guid: 446de4ba36021554a94eb3e445fa294c, type: 3}
-  m_ShaderKeywords: _CADDTEXUVT_ON _DISSOLVEAR_ON _DISSOLVEPLUSAR_ON _DISSOLVETEXUVS_NORMAL
-    _DISTORTADDTEX_ON _DISTORTMASKTEXAR_ON _DISTORTTEXAR_ON _FACE_Y _IFADDTEXCOLOR_ON
-    _IFDISSOLVECOLOR_ON _IFMASKPLUSTEX_ON _MAINTEXUVS_NORMAL _MASKALPHARA_ON _MASKPLUSAR_ON
-    _MASKTEXUVS_NORMAL _VTOAR_ON _VTOMASKAR_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _DISSOLVETEXUVS_NORMAL
+  - _FACE_Y
+  - _MAINTEXUVS_NORMAL
+  - _MASKTEXUVS_NORMAL
+  m_InvalidKeywords:
+  - _CADDTEXUVT_ON
+  - _DISSOLVEAR_ON
+  - _DISSOLVEPLUSAR_ON
+  - _DISTORTADDTEX_ON
+  - _DISTORTMASKTEXAR_ON
+  - _DISTORTTEXAR_ON
+  - _IFADDTEXCOLOR_ON
+  - _IFDISSOLVECOLOR_ON
+  - _IFDISSOLVEPLUS_ON
+  - _MASKALPHARA_ON
+  - _MASKPLUSAR_ON
+  - _VTOAR_ON
+  - _VTOMASKAR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -94,6 +112,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AddTexAR: 0
     - _AddTexBlend: 0
@@ -170,7 +189,7 @@ Material:
     - _IfCustomLight: 0
     - _IfDissolveColor: 1
     - _IfDissolveOffsetC: 0
-    - _IfDissolvePlus: 1
+    - _IfDissolvePlus: 0
     - _IfFNLAlpha: 0
     - _IfFlowmap: 0
     - _IfMaskColor: 0
@@ -267,3 +286,4 @@ Material:
     - _MainTexRefine: {r: 1, g: 1, b: 2, a: 0}
     - _TexCenter: {r: 0, g: 0, b: 0, a: 0}
     - _fnl_color: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

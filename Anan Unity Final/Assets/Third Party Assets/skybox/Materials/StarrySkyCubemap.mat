@@ -101,8 +101,8 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _GradientFadeBegin: -0.57
-    - _GradientFadeEnd: 1
+    - _GradientFadeBegin: -0.56
+    - _GradientFadeEnd: 0.24
     - _HorizonScaleFactor: 1
     - _Metallic: 0
     - _Mode: 0
@@ -117,7 +117,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StarFadeBegin: 1
-    - _StarFadeEnd: -1
+    - _StarFadeEnd: 0.36
     - _StarLayer1Density: 0.05
     - _StarLayer1EdgeFade: 0.91
     - _StarLayer1HDRBoost: 2.46
@@ -125,13 +125,13 @@ Material:
     - _StarLayer1RotationSpeed: 0
     - _StarLayer1TwinkleAmount: 1
     - _StarLayer1TwinkleSpeed: 3
-    - _StarLayer2Density: 0.0321
+    - _StarLayer2Density: 0
     - _StarLayer2EdgeFade: 0.678
     - _StarLayer2HDRBoost: 2.69
     - _StarLayer2MaxRadius: 0.004
     - _StarLayer2RotationSpeed: 0
     - _StarLayer2TwinkleAmount: 0.632
-    - _StarLayer2TwinkleSpeed: 4
+    - _StarLayer2TwinkleSpeed: 3.93
     - _StarLayer3Density: 0.0015
     - _StarLayer3EdgeFade: 0.168
     - _StarLayer3HDRBoost: 1.35
@@ -144,8 +144,8 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _GradientHorizonColor: {r: 0.658143, g: 1, b: 0.5990566, a: 1}
-    - _GradientSkyColor: {r: 0.86765075, g: 0.35294116, b: 1, a: 1}
+    - _GradientHorizonColor: {r: 1, g: 0.5518868, b: 0.5739532, a: 1}
+    - _GradientSkyColor: {r: 0.38937345, g: 0.50900096, b: 0.6603774, a: 1}
     - _MoonColor: {r: 0.3089623, g: 0.40626055, b: 0.5, a: 1}
     - _MoonComputedPositionData: {r: 0.4185294, g: 0.085999966, b: 0.9041223, a: 0}
     - _MoonComputedRotationData: {r: 6.197079, g: 6.7167253, b: 0, a: 0}
