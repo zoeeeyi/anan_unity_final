@@ -78,9 +78,9 @@ Material:
     - _TexAR: 1
     - _TexAlpha: 0.085
     - _TexRotator: 0.075
-    - _VignettePower: 1.35
+    - _VignettePower: 1.62
     - _VignettePowerK: 1.5
-    - _VignetteScale: 1.44
+    - _VignetteScale: 2.05
     - _VignetteScaleK: 1.5
     - _centerU: 0.43
     - _centerV: 0.5

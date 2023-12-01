@@ -142,11 +142,11 @@ Material:
     - _DstBlend: 0
     - _FaceFilp: 1
     - _Frenel: 1
-    - _FrenelPower: 1.63
+    - _FrenelPower: 1.86
     - _FresnelOp: 1
     - _FresnelOpPower: 0
     - _GampOne: 1
-    - _Gloss: 0.22
+    - _Gloss: 0.18
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -180,7 +180,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SoftParticle: 1
     - _SoftPower: 1
-    - _Specular: 1.33
+    - _Specular: 1.65
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _TextureAlpha: 0

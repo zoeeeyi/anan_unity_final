@@ -32,6 +32,6 @@ Material:
     - _Glossiness: 0.099
     - _Outline: 0.002
     m_Colors:
-    - _Color: {r: 0.8160377, g: 0.82218635, b: 1, a: 1}
+    - _Color: {r: 0.62588996, g: 0.6880844, b: 0.9150943, a: 1}
     - _OutlineColor: {r: 0.5367569, g: 0.5783972, b: 0.6981132, a: 1}
   m_BuildTextureStacks: []
