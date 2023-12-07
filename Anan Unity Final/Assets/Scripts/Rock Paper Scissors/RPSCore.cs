@@ -20,10 +20,14 @@ public class RPSCore : MonoBehaviour
     [HideInInspector] public UnityEvent PlayerWin;
     [HideInInspector] public UnityEvent CompWin;
     [HideInInspector] public UnityEvent Draw;
+    //Animation events
+    [HideInInspector] public UnityEvent AnimatePlayerWin;
+    [HideInInspector] public UnityEvent AnimateCompWin;
 
     //Implement on timeline, while starting comp animation
     public void OnStartRound()
     {
+        m_result = 2; //Default result is 2 (Draw)
         SetCompHand();
         StartRound.Invoke();
         Debug.Log("Start Round!");
@@ -51,10 +55,10 @@ public class RPSCore : MonoBehaviour
         if (m_idle) return;
 
         playerHand = _hand;
-        int _result = CompareHands(playerHand, compHand);
+        m_result = CompareHands(playerHand, compHand);
         Debug.Log("Player chose: " + playerHand);
 
-        switch (_result)
+        switch (m_result)
         {
             case 0:
                 OnPlayerWin();
@@ -89,6 +93,13 @@ public class RPSCore : MonoBehaviour
     void OnDraw()
     {
         Draw.Invoke();
+    }
+
+    //Implemented 
+    public void OnAttackAnimation()
+    {
+        if (m_result == 0) AnimatePlayerWin.Invoke();
+        else if (m_result == 1) AnimateCompWin.Invoke();
     }
     #endregion
 
@@ -129,6 +140,7 @@ public class RPSCore : MonoBehaviour
     }
     #endregion
 
+    int m_result = new int();
     int CompareHands(Hand _playerHand, Hand _compHand)
     {
         switch(_playerHand)

@@ -64,4 +64,10 @@ public class PlayerAnimCtrl : MonoBehaviour
 
         m_playerHandHolder.mesh = _hand;
     }
+
+    //Implement on animation clip. Combined usage with chess battle components
+    void PlayAttackAnimation()
+    {
+        RPSCore.instance.OnAttackAnimation();
+    }
 }
