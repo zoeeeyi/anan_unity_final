@@ -16,6 +16,7 @@ public class RPSCore : MonoBehaviour
     bool m_idle = true;
     [HideInInspector] public UnityEvent StartRound;
     [HideInInspector] public UnityEvent EndRound;
+    [HideInInspector] public UnityEvent TimeRunOut;
     [HideInInspector] public UnityEvent PlayerSelect;
     [HideInInspector] public UnityEvent PlayerWin;
     [HideInInspector] public UnityEvent CompWin;
@@ -38,7 +39,14 @@ public class RPSCore : MonoBehaviour
     {
         if (m_idle) return;
         m_idle = true;
-        if (_timeRunOut) OnCompWin();
+
+        //If this is triggered at the end of the timing ring, trigger computer win.
+        if (_timeRunOut)
+        {
+            OnCompWin();
+            OnAttackAnimation(true);
+        }
+
         EndRound.Invoke();
         Debug.Log("End Round!");
     }
@@ -96,9 +104,10 @@ public class RPSCore : MonoBehaviour
     }
 
     //Implemented 
-    public void OnAttackAnimation()
+    public void OnAttackAnimation(bool _timeRunOut = false)
     {
-        if (m_result == 0) AnimatePlayerWin.Invoke();
+        if (_timeRunOut) AnimateCompWin.Invoke();
+        else if (m_result == 0) AnimatePlayerWin.Invoke();
         else if (m_result == 1) AnimateCompWin.Invoke();
     }
     #endregion

@@ -26,5 +26,11 @@ public abstract class Health : MonoBehaviour
         }
     }
 
+    public float CalculateHealthPct()
+    {
+        float _pct = m_currentHealth / m_maxHealth;
+        return _pct;
+    }
+
     protected abstract void OnDeath();
 }
