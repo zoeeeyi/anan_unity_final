@@ -6,66 +6,74 @@ using UnityEngine.Events;
 
 public class RPSCore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static RPSCore instance;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        instance = this;
     }
 
     #region Core Game Logic
     bool m_idle = true;
-    public static UnityEvent StartRound;
-    public static UnityEvent EndRound;
-    public static UnityEvent PlayerSelect;
-    public static UnityEvent PlayerWin;
-    public static UnityEvent CompWin;
-    public static UnityEvent Draw;
+    [HideInInspector] public UnityEvent StartRound;
+    [HideInInspector] public UnityEvent EndRound;
+    [HideInInspector] public UnityEvent PlayerSelect;
+    [HideInInspector] public UnityEvent PlayerWin;
+    [HideInInspector] public UnityEvent CompWin;
+    [HideInInspector] public UnityEvent Draw;
 
+    //Implement on timeline, while starting comp animation
     public void OnStartRound()
     {
         SetCompHand();
         StartRound.Invoke();
+        Debug.Log("Start Round!");
     }
 
-    public void OnEndRound()
+    //Implement on Timing Ring animator, or activated by player button press
+    public void OnEndRound(bool _timeRunOut = false)
     {
         if (m_idle) return;
         m_idle = true;
+        if (_timeRunOut) OnCompWin();
+        EndRound.Invoke();
+        Debug.Log("End Round!");
     }
 
+    //Implement on timing ring animator
     public void OnWaitPlayerInput()
     {
         m_idle = false;
     }
 
+    //Implemented with button press code
     void OnPlayerHandSelect(Hand _hand)
     {
         if (m_idle) return;
 
-        int _result = CompareHands(_hand, compHand);
+        playerHand = _hand;
+        int _result = CompareHands(playerHand, compHand);
+        Debug.Log("Player chose: " + playerHand);
+
         switch (_result)
         {
             case 0:
                 OnPlayerWin();
+                Debug.Log("Player wins!");
                 break;
 
             case 1:
                 OnCompWin();
+                Debug.Log("Comp wins!");
                 break;
 
             case 2:
                 OnDraw();
+                Debug.Log("Draw!");
                 break;
         }
 
-        OnEndRound();
         PlayerSelect.Invoke();
+        OnEndRound();
     }
 
     void OnPlayerWin()
@@ -85,8 +93,8 @@ public class RPSCore : MonoBehaviour
     #endregion
 
     #region Rock Paper Scissors Rules
-    public static Hand playerHand { get; private set; }
-    public static Hand compHand { get; private set; }
+    public Hand playerHand { get; private set; }
+    public Hand compHand { get; private set; }
 
     public enum Hand
     {
@@ -101,6 +109,7 @@ public class RPSCore : MonoBehaviour
         Array _hands = Enum.GetValues(typeof(Hand));
         System.Random _random = new System.Random();
         compHand = (Hand) _hands.GetValue(_random.Next(_hands.Length));
+        Debug.Log("Computer Hand: " + compHand);
     }
 
     #region Button Press

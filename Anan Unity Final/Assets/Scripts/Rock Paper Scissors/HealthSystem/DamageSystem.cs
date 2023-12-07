@@ -7,8 +7,8 @@ public class DamageSystem : MonoBehaviour
 {
     private void Start()
     {
-        RPSCore.PlayerWin.AddListener(delegate { DealDamageToComp(m_playerCurrentDamage); });
-        RPSCore.CompWin.AddListener(DealDamageToPlayer);
+        RPSCore.instance.PlayerWin.AddListener(delegate { DealDamageToComp(m_playerCurrentDamage); });
+        RPSCore.instance.CompWin.AddListener(DealDamageToPlayer);
     }
 
     [SerializeField] PlayerHealth m_playerHealth;

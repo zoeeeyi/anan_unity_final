@@ -5,18 +5,63 @@ using UnityEngine;
 public class PlayerAnimCtrl : MonoBehaviour
 {
     Animator m_animator;
+    bool m_playerSelected;
+
+    [SerializeField] MeshFilter m_playerHandHolder;
+    [SerializeField] Mesh m_rock;
+    [SerializeField] Mesh m_paper;
+    [SerializeField] Mesh m_scissors;
 
     void Start()
     {
         m_animator = GetComponent<Animator>();
-        RPSCore.PlayerSelect.AddListener(delegate { PlayAnim(RPSCore.playerHand); });
+        RPSCore.instance.StartRound.AddListener(
+            delegate 
+            { 
+                ControlSwingAnim(true); 
+                SetPlayerSelected(false); 
+            });
+        RPSCore.instance.EndRound.AddListener(delegate { ControlSwingAnim(false); });
+        RPSCore.instance.PlayerSelect.AddListener(PlayPlayerSelectAnim);
+        RPSCore.instance.PlayerSelect.AddListener(delegate { SetPlayerSelected(true); });
     }
 
-    void PlayAnim(RPSCore.Hand _hand)
+    void SetPlayerSelected(bool _selected)
     {
-        switch (_hand)
-        {
+        m_playerSelected = _selected;
+    }
 
+    void ControlSwingAnim(bool _play)
+    {
+        if (_play) m_animator.SetTrigger("Swing");
+        else if (!_play && !m_playerSelected) m_animator.SetTrigger("Stop Swing");
+    }
+
+    void PlayPlayerSelectAnim()
+    {
+        m_animator.SetTrigger("Select Hand");
+    }
+
+    void SetHandMesh()
+    {
+        Mesh _hand = new Mesh();
+        #region choose hand mesh based on player hand selection
+        switch (RPSCore.instance.playerHand)
+        {
+            case RPSCore.Hand.Rock:
+                _hand = m_rock;
+                break;
+
+            case RPSCore.Hand.Paper:
+                _hand = m_paper;
+                break;
+
+            case RPSCore.Hand.Scissors:
+                _hand = m_scissors;
+                break;
         }
+        #endregion
+
+        m_playerHandHolder.mesh = _hand;
     }
 }
