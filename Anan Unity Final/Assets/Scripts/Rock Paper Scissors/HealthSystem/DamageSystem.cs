@@ -20,6 +20,9 @@ public class DamageSystem : MonoBehaviour
     [SerializeField] float m_stage2Damage;
     [SerializeField] float m_playerMaxDamage;
     float m_playerCurrentDamage;
+
+    #region Damage Stage
+    public PlayerDamageStage currentDamageStage { get; private set; }
     public enum PlayerDamageStage
     {
         Min,
@@ -27,8 +30,9 @@ public class DamageSystem : MonoBehaviour
         Stage2,
         Max
     }
-    [SerializeField] float m_compFixedDamage;
+    #endregion
 
+    [SerializeField] float m_compFixedDamage;
     void DealDamage(Health _damageTaker, float _damage)
     {
         _damageTaker.TakeDamage(_damage);
@@ -47,6 +51,7 @@ public class DamageSystem : MonoBehaviour
 
     public void ChangePlayerDamage(PlayerDamageStage _stage)
     {
+        currentDamageStage = _stage;
         switch (_stage)
         {
             case PlayerDamageStage.Min:

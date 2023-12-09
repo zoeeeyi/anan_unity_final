@@ -644,21 +644,21 @@ AnimationClip:
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 2
+    intParameter: 1
     messageOptions: 0
-  - time: 0.46666667
+  - time: 0.45
     functionName: SetPlayerDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 3
     messageOptions: 0
-  - time: 0.55
+  - time: 0.5
     functionName: SetPlayerDamage
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 2
+    intParameter: 1
     messageOptions: 0
   - time: 0.6333333
     functionName: SetPlayerDamage

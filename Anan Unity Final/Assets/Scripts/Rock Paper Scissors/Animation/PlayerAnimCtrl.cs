@@ -11,6 +11,7 @@ public class PlayerAnimCtrl : MonoBehaviour
     [SerializeField] Mesh m_rock;
     [SerializeField] Mesh m_paper;
     [SerializeField] Mesh m_scissors;
+    [SerializeField] Mesh m_timeRunOut;
 
     void Start()
     {
@@ -63,6 +64,11 @@ public class PlayerAnimCtrl : MonoBehaviour
         #endregion
 
         m_playerHandHolder.mesh = _hand;
+    }
+
+    void SetTimeRunOutMesh()
+    {
+        m_playerHandHolder.mesh = m_timeRunOut;
     }
 
     //Implement on animation clip. Combined usage with chess battle components
