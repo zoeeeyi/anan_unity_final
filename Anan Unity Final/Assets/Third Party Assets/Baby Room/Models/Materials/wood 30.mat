@@ -314,14 +314,14 @@ Material:
     - _VTOTex_Uspeed: 0
     - _VTOTex_Vspeed: 0
     - _ZWrite: 1
-    - _Ztest: 4
+    - _Ztest: 8
     - _Zwrite: 0
     - __dirty: 1
     - _fnl_power: 1
     - _fnl_sacle: 0
     - _qubaohedu: 0
     - _screenVTOon: 0
-    - _softFacotr: 1
+    - _softFacotr: 0
     - _soft_sting: 0
     - _softback: 0
     - _sot_sting_A: 0

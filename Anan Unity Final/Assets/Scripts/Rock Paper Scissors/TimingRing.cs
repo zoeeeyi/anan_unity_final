@@ -22,6 +22,8 @@ public class TimingRing : MonoBehaviour
 
         RPSCore.instance.StartRound.AddListener(EnableAnimator);
         RPSCore.instance.PlayerSelect.AddListener(PauseRing);
+        RPSCore.instance.PlayerWin.AddListener(PlayWinResultParticle);
+        RPSCore.instance.CompWin.AddListener(PlayLoseResultParticle);
     }
 
     #region Animation Events
@@ -53,8 +55,10 @@ public class TimingRing : MonoBehaviour
     {
         m_timeRunOut = false;
         m_animator.SetTrigger("Pause");
+    }
 
-        //Set result particles
+    void PlayWinResultParticle()
+    {
         switch (m_damageSystem.currentDamageStage)
         {
             case DamageSystem.PlayerDamageStage.Min:
@@ -72,6 +76,12 @@ public class TimingRing : MonoBehaviour
                 m_perfectParticle.Play();
                 break;
         }
+    }
+
+    void PlayLoseResultParticle()
+    {
+        m_failParticle.Stop();
+        m_failParticle.Play();
     }
 
     public void EnableAnimator()
