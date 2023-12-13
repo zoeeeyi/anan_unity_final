@@ -76,4 +76,9 @@ public class PlayerAnimCtrl : MonoBehaviour
     {
         RPSCore.instance.OnAttackAnimation();
     }
+
+    void ResetHandMesh()
+    {
+        m_playerHandHolder.mesh = m_rock;
+    }
 }

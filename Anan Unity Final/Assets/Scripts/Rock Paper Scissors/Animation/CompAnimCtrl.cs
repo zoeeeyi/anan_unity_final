@@ -12,15 +12,23 @@ public class CompAnimCtrl : MonoBehaviour
     [SerializeField] Mesh m_paper;
     [SerializeField] Mesh m_scissors;
 
+    [SerializeField] float m_resetIdleDelay = 0.5f;
+
     void Start()
     {
         m_animator = GetComponent<Animator>();
         RPSCore.instance.StartRound.AddListener(PlayAnim);
+        RPSCore.instance.EndRound.AddListener(delegate { Invoke("PlayIdle", m_resetIdleDelay); });
     }
 
     void PlayAnim()
     {
         m_animator.SetTrigger("Swing");
+    }
+
+    void PlayIdle()
+    {
+        m_animator.SetTrigger("Idle");
     }
 
     //Implement on animation
@@ -79,5 +87,10 @@ public class CompAnimCtrl : MonoBehaviour
         #endregion
 
         m_compHandHolder.mesh = _hand;
+    }
+
+    void ResetHandMesh()
+    {
+        m_compHandHolder.mesh = m_rock;
     }
 }
