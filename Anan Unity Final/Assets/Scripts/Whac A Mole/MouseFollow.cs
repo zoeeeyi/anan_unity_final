@@ -8,7 +8,6 @@ using static RootMotion.FinalIK.HitReaction;
 public class MouseFollow : MonoBehaviour
 {
     [Header("Toilet Sucker Properties")]
-    [SerializeField] bool m_cursorVisibility = false;
     [SerializeField] GameObject m_toiletSucker;
     [SerializeField] Animator m_toiletSuckerAnimator;
     [SerializeField] float m_zOffset;
@@ -42,6 +41,8 @@ public class MouseFollow : MonoBehaviour
     [SerializeField] Material m_transMat;
     [SerializeField] Color m_transparentColor;
     Color m_startColor;
+
+    bool m_playerActive = true;
 
     private void Awake()
     {
@@ -77,11 +78,14 @@ public class MouseFollow : MonoBehaviour
     {
         m_startYPos = m_toiletSucker.transform.position.y;
         groundPlane = new Plane(Vector3.up, Vector3.zero);
-        Cursor.visible = m_cursorVisibility;
     }
 
     void Update()
     {
+        if (!m_playerActive)
+        {
+            return;
+        }
         // Create a ray from the camera through the mouse position
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -105,6 +109,15 @@ public class MouseFollow : MonoBehaviour
         bool _outOfXBound = (_mouseX < m_leftBound.position.x) || (_mouseX > m_rightBound.position.x);
         bool _outOfZBound = (_mouseZ < m_lowerBound.position.z) || (_mouseZ > m_upBound.position.z);
         Vector3 _newPos = m_toiletSucker.transform.position;
+
+        //Set Mouse Visibility
+        if (_outOfXBound || _outOfZBound)
+        {
+            if (!Cursor.visible) Cursor.visible = true;
+        } else
+        {
+            if (Cursor.visible) Cursor.visible = false;
+        }
 
         //Assign new coordinates
         if (!_outOfXBound) _newPos.x = _mouseX;
@@ -138,6 +151,8 @@ public class MouseFollow : MonoBehaviour
 
     void SetPlayerActive(bool _yesOrNo = false)
     {
+        Cursor.visible = true;
+        m_playerActive = false;
         m_toiletSucker.gameObject.SetActive(_yesOrNo);
     }
 }
