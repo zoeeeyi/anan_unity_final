@@ -5,20 +5,26 @@ using UnityEngine.Playables;
 
 public class RPSEndGameManager : MonoBehaviour
 {
-    PlayableDirector m_directorEndGame;
+    [SerializeField] PlayableDirector m_directorPlayerWin;
+    [SerializeField] PlayableDirector m_directorCompWin;
 
     void Start()
     {
-        m_directorEndGame = GetComponent<PlayableDirector>();
-
         RPSCore.instance.EndGameMaster.AddListener(delegate { StartCoroutine(SlowDownAnimation()); });
-        RPSCore.instance.CompDeath.AddListener(PlayEndGameTimeline);
+        RPSCore.instance.CompDeath.AddListener(PlayPlayerWinTimeline);
     }
 
-    void PlayEndGameTimeline()
+    #region Timeline Controls
+    void PlayPlayerWinTimeline()
     {
-        m_directorEndGame.Play();
+        m_directorPlayerWin.Play();
     }
+
+    void PlayCompWinTimeline()
+    {
+        m_directorCompWin.Play();
+    }
+    #endregion
 
     #region Slow Down Animation and Timeline
     [Header("Slow Down Animation and Timeline")]

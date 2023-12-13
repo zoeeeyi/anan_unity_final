@@ -35691,6 +35691,56 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4493081124661038, guid: 015d2a8cc0cd28d4e87a87751c5f0048, type: 3}
   m_PrefabInstance: {fileID: 237751371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &246365635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 246365636}
+  - component: {fileID: 246365637}
+  m_Layer: 0
+  m_Name: End Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &246365636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246365635}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1365991736}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246365637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246365635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17998ac57426cd94491d6682d3ef2005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_directorPlayerWin: {fileID: 1424627900}
+  m_directorCompWin: {fileID: 979449870}
+  m_directorCore: {fileID: 1456357846}
+  m_playerAnimator: {fileID: 462374684}
+  m_compAnimator: {fileID: 1086011641}
+  m_slowSmoothTime: 0.5
 --- !u!1 &253863900
 GameObject:
   m_ObjectHideFlags: 0
@@ -50618,6 +50668,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 462909846}
     m_Modifications:
+    - target: {fileID: 32715812992956448, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 32715812992956448, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 695547844696088112, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
       propertyPath: m_Name
       value: Restart Button
@@ -50629,6 +50687,10 @@ PrefabInstance:
     - target: {fileID: 3030163057025996582, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4897507226835135840, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4928133438054023140, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
       propertyPath: m_Enabled
@@ -50718,7 +50780,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4928133438054023140, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5962477131281984283, guid: 5c7ae3c8bd84dfe4ea88524e5787e663, type: 3}
@@ -60949,7 +61012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -98234,12 +98297,16 @@ PlayableDirector:
   m_GameObject: {fileID: 979449868}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
-  m_InitialState: 1
+  m_PlayableAsset: {fileID: 11400000, guid: 12b9d70087671204a9b9f40d914caf3e, type: 2}
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -331816475805965977, guid: 12b9d70087671204a9b9f40d914caf3e, type: 2}
+    value: {fileID: 332971696}
+  - key: {fileID: -8126738143146204050, guid: 12b9d70087671204a9b9f40d914caf3e, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!1001 &986998611
@@ -130682,6 +130749,7 @@ Transform:
   - {fileID: 1663781904}
   - {fileID: 1030907270}
   - {fileID: 1456357844}
+  - {fileID: 246365636}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1387191145
@@ -130831,7 +130899,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1424627899}
   - component: {fileID: 1424627900}
-  - component: {fileID: 1424627901}
   m_Layer: 0
   m_Name: End Game Timeline
   m_TagString: Untagged
@@ -130901,22 +130968,6 @@ PlayableDirector:
     - a4888de2fef565e45840250fd0d0ddaa: {fileID: 655776854}
     - 2750ee67d61ffaa4c97f352463ff7612: {fileID: 705630416}
     - 43dc2d4bbf4b4df41b94616b90ceef5c: {fileID: 605023337}
---- !u!114 &1424627901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424627898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17998ac57426cd94491d6682d3ef2005, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_directorCore: {fileID: 1456357846}
-  m_playerAnimator: {fileID: 462374684}
-  m_compAnimator: {fileID: 1086011641}
-  m_slowSmoothTime: 0.5
 --- !u!1 &1431679556
 GameObject:
   m_ObjectHideFlags: 0
