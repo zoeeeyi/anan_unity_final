@@ -20,10 +20,14 @@ public class TimingRing : MonoBehaviour
     {
         m_animator = GetComponent<Animator>();
 
+        //Round events
         RPSCore.instance.StartRound.AddListener(EnableAnimator);
         RPSCore.instance.PlayerSelect.AddListener(PauseRing);
         RPSCore.instance.PlayerWin.AddListener(PlayWinResultParticle);
         RPSCore.instance.CompWin.AddListener(PlayLoseResultParticle);
+
+        //Game events
+        RPSCore.instance.EndGameMaster.AddListener(delegate { Invoke("DisableSelf", 0.5f); });
     }
 
     #region Animation Events
@@ -92,6 +96,11 @@ public class TimingRing : MonoBehaviour
     public void DisableAnimator()
     {
         m_animator.enabled = false;
+    }
+
+    public void DisableSelf()
+    {
+        gameObject.SetActive(false);
     }
     #endregion
 }

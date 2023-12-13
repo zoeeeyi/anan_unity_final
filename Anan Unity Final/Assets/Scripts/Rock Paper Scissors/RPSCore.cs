@@ -21,6 +21,12 @@ public class RPSCore : MonoBehaviour
     [HideInInspector] public UnityEvent PlayerWin;
     [HideInInspector] public UnityEvent CompWin;
     [HideInInspector] public UnityEvent Draw;
+
+    //Death events
+    [HideInInspector] public UnityEvent EndGameMaster;
+    [HideInInspector] public UnityEvent PlayerDeath;
+    [HideInInspector] public UnityEvent CompDeath;
+
     //Animation events
     [HideInInspector] public UnityEvent AnimatePlayerWin;
     [HideInInspector] public UnityEvent AnimateCompWin;

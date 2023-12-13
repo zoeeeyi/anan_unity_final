@@ -19,7 +19,7 @@ public abstract class Health : MonoBehaviour
             m_currentHealth -= _damage;
 
             //Deal with death situation when hp is below 0
-            if (m_currentHealth < 0)
+            if (m_currentHealth <= 0)
             {
                 OnDeath();
             }

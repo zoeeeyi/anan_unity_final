@@ -5,10 +5,9 @@ using UnityEngine.Events;
 
 public class CompHealth : Health
 {
-    [HideInInspector] public UnityEvent CompDeath;
-
     protected override void OnDeath()
     {
-        CompDeath.Invoke();
+        RPSCore.instance.EndGameMaster.Invoke();
+        RPSCore.instance.CompDeath.Invoke();
     }
 }

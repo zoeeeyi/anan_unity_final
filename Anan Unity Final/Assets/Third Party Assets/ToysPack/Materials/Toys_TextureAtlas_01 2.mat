@@ -165,7 +165,7 @@ Material:
     - _OcclusionStrength: 1
     - _OpacityU_Speed: 0
     - _OpacityV_Speed: 0
-    - _OutLinePower: 0.0003
+    - _OutLinePower: 0
     - _PanUV: 0
     - _Parallax: 0.02
     - _PosGamp: 1
