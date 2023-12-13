@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sand_Height 1
+  m_Name: Sand_Height 2
   m_Shader: {fileID: 4800000, guid: 446de4ba36021554a94eb3e445fa294c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -18,6 +18,7 @@ Material:
   - _MASKTEXUVS_NORMAL
   m_InvalidKeywords:
   - _CADDTEXUVT_ON
+  - _CUSTOMDATADIS_ON
   - _DISSOLVEAR_ON
   - _DISSOLVEPLUSAR_ON
   - _DISTORTADDTEX_ON
@@ -64,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissloveTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 49f10d0f416d2744a85d2eae2d6e2b15, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DissloveTexPlus:
@@ -84,7 +85,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 341486b289b11484eb6651dfdd0e105c, type: 3}
+        m_Texture: {fileID: 2800000, guid: 10bc3a14e4f98b7438e986cc1c9df970, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskPlusTex:
@@ -165,14 +166,14 @@ Material:
     - _Cullmode: 0
     - _CustomDistort: 0
     - _CustomVAT: 0
-    - _CustomdataDis: 0
+    - _CustomdataDis: 1
     - _CustomdataDisT: 0
     - _CustomdataMainTexUV: 0
     - _CustomdataMaskUV: 0
     - _Cutoff: 0.5
-    - _DIssloveFactor: 0.5
-    - _DIssloveSoft: 0.5
-    - _DIssloveWide: 0.1
+    - _DIssloveFactor: 0.31
+    - _DIssloveSoft: 0.64
+    - _DIssloveWide: 0.49
     - _DIssolve_rotat: 0
     - _DepthF: 0
     - _DepthfadeFactor: 1
@@ -183,8 +184,8 @@ Material:
     - _DissolveAR: 1
     - _DissolveC: 0
     - _DissolveCV: 0
-    - _DissolveFactorC1: 1
-    - _DissolveFactorC2: 2
+    - _DissolveFactorC1: 0
+    - _DissolveFactorC2: 0
     - _DissolveOffsetUC1: 1
     - _DissolveOffsetUC2: 0
     - _DissolveOffsetVC1: 1
@@ -326,11 +327,11 @@ Material:
     - _AddTexRefine: {r: 1, g: 1, b: 2, a: 0}
     - _BackFaceColor: {r: 1, g: 1, b: 1, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DIssloveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DIssloveColor: {r: 1, g: 1, b: 1, a: 0}
     - _DepthColor: {r: 0, g: 0, b: 0, a: 0}
     - _Dir: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _MainColor: {r: 2, g: 2, b: 2, a: 1}
+    - _MainColor: {r: 0.05825027, g: 0.06311347, b: 0.16037738, a: 0.85882354}
     - _MainTexRefine: {r: 1, g: 1, b: 2, a: 0}
     - _TexCenter: {r: 0, g: 0, b: 0, a: 0}
     - _fnl_color: {r: 1, g: 1, b: 1, a: 0}
