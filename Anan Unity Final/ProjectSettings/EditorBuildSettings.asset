@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mini Games/Whac A Mole.unity
     guid: c181f7d96eb24c74d83497f18126476d
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 1470fb7a0aca6794d885b858f6da5000
   m_configObjects: {}
