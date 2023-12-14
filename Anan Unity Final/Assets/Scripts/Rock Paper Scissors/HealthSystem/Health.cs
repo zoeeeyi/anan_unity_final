@@ -22,6 +22,7 @@ public abstract class Health : MonoBehaviour
             if (m_currentHealth <= 0)
             {
                 OnDeath();
+                RPSCore.instance.EndGameMaster.Invoke();
             }
         }
     }

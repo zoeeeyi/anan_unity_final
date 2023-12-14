@@ -7,7 +7,6 @@ public class CompHealth : Health
 {
     protected override void OnDeath()
     {
-        RPSCore.instance.EndGameMaster.Invoke();
         RPSCore.instance.CompDeath.Invoke();
     }
 }
