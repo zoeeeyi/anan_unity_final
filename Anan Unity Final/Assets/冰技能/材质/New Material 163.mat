@@ -1,0 +1,591 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Material 163
+  m_Shader: {fileID: 4800000, guid: 10cb98d93a8d8c34b98b8b885a1a92fa, type: 3}
+  m_ShaderKeywords: _CADDTEXUVT_ON _DISSLOVEOFF_ON _DISSLOVEUVORPOWER_ON _DISSOLVEAR_ON
+    _DISSOLVEPLUSAR_ON _DISSOLVETEXUVS_NORMAL _DISTORTADDTEX_ON _DISTORTMASKTEXAR_ON
+    _DISTORTTEXAR_ON _FACE_Y _FRENEL_ON _FRESNELONE_ON _FRESNELOP_ON _GAMPONE_ON
+    _IFADDTEXCOLOR_ON _IFDISSOLVECOLOR_ON _LIGHTFRENEL_ON _LIGHT_ON _MAINTEXUVS_NORMAL
+    _MASKALPHARA_ON _MASKPLUSAR_ON _MASKTEXUVS_NORMAL _MASKTEX_ON _POSGAMP_ON _SELFALPHA_ON
+    _SOFT1_ON _SOFTPARTICLE_ON _VTOAR_ON _VTOMASKAR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AddTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Basetex:
+        m_Texture: {fileID: 2800000, guid: f2444b51730bacd4bacc25c1b1f70482, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 1.03}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Crack:
+        m_Texture: {fileID: 2800000, guid: 6448ebdadf788614b9f0a6d082dfe078, type: 3}
+        m_Scale: {x: 0.58, y: 0.79}
+        m_Offset: {x: 3.58, y: 2.19}
+    - _CubeMap:
+        m_Texture: {fileID: 8900000, guid: be7ea86bf4a4e894ca6b9451c9574bbd, type: 2}
+        m_Scale: {x: 1, y: 1.66}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Diffuse:
+        m_Texture: {fileID: 2800000, guid: 3e578d53eaf24d74e9c6bdf7ba6439c7, type: 3}
+        m_Scale: {x: 0.24, y: 0.97}
+        m_Offset: {x: 0.71, y: 2.79}
+    - _DissTextuers:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Disslove:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissloveTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissloveTexPlus:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DistortTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _GamColor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightDir:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTextures:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskPlusTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NOrmar:
+        m_Texture: {fileID: 2800000, guid: fcc06885f66252044839ab4d89739dc2, type: 3}
+        m_Scale: {x: 0.46, y: 0.18}
+        m_Offset: {x: 2.67, y: 3.59}
+    - _NiuQu:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OpacityTextures:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutLine:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OutLineTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Ref:
+        m_Texture: {fileID: 2800000, guid: 0842185ad72bb22438c79294fd678831, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RongJie:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SnowTextures:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tex:
+        m_Texture: {fileID: 2800000, guid: 31a96881ec2c5c14fac7cd35fe6e75ba, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: -1}
+    - _Texture0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureDistor:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureSample3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureVertexoff:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureVertexoff1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Textures:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VATNormalTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VATPositionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VTOMaskTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VTOTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexT:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _cubemap:
+        m_Texture: {fileID: 8900000, guid: be7ea86bf4a4e894ca6b9451c9574bbd, type: 2}
+        m_Scale: {x: 1.49, y: 1.74}
+        m_Offset: {x: 0, y: 0}
+    - _dsefga:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _node_819:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _normal:
+        m_Texture: {fileID: 2800000, guid: 71edc1baf2c1b914a9a1ab470ba9322d, type: 3}
+        m_Scale: {x: -0.45, y: 0.97}
+        m_Offset: {x: 1.02, y: 0.82}
+    - _specular:
+        m_Texture: {fileID: 2800000, guid: e3abe1b9217872f4ab9294baff990227, type: 3}
+        m_Scale: {x: 1, y: 0.72}
+        m_Offset: {x: 1.87, y: 0}
+    - _tex4coord4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _AddTexAR: 0
+    - _AddTexBlend: 0
+    - _AddTexBlendMode: 0
+    - _AddTexC: 0
+    - _AddTexCV: 0
+    - _AddTexRo: 0
+    - _AddTexUVS: 0
+    - _AddTexUspeed: 0
+    - _AddTexVspeed: 0
+    - _AlphaAdd: 0
+    - _BumpScale: 1
+    - _CAddTexUV: 0
+    - _CAddTexUVT: 1
+    - _CenterU: 0.5
+    - _CenterV: 0.5
+    - _Comparison: 8
+    - _Cubemap: 1.19
+    - _CubemapScale: 0
+    - _Cullmode: 0
+    - _CustomDistort: 0
+    - _CustomVAT: 0
+    - _CustomdataDis: 0
+    - _CustomdataDisT: 0
+    - _CustomdataMainTexUV: 0
+    - _CustomdataMaskUV: 0
+    - _Cutoff: 0.5
+    - _DIssloveFactor: 0.5
+    - _DIssloveSoft: 0.5
+    - _DIssloveWide: 0.1
+    - _DIssolve_rotat: 0
+    - _DepthF: 0
+    - _DepthPower: 0
+    - _DepthfadeFactor: 1
+    - _Depthfadeon: 0
+    - _DetailNormalMapScale: 1
+    - _DisTex_Uspeed: 0
+    - _DisTex_Vspeed: 0
+    - _DissLinePower: 1
+    - _DissU_Speed: 0
+    - _DissV_Speed: 0
+    - _DissloveOff: 1
+    - _DisslovePower: 0
+    - _DissloveUVorPower: 1
+    - _DissolveAR: 1
+    - _DissolveC: 0
+    - _DissolveCV: 0
+    - _DissolveFactorC1: 1
+    - _DissolveFactorC2: 2
+    - _DissolveOffsetUC1: 1
+    - _DissolveOffsetUC2: 0
+    - _DissolveOffsetVC1: 1
+    - _DissolveOffsetVC2: 1
+    - _DissolvePlusAR: 1
+    - _DissolvePlusC: 0
+    - _DissolvePlusCV: 0
+    - _DissolvePlusR: 0
+    - _DissolveTexDivide: 1
+    - _DissolveTexExp: 1
+    - _DissolveTexUVS: 0
+    - _DistortAddTex: 1
+    - _DistortDisTex: 0
+    - _DistortFactor: 0
+    - _DistortFactorC1: 1
+    - _DistortFactorC2: 3
+    - _DistortMainTex: 1
+    - _DistortMask: 0
+    - _DistortMaskTexAR: 1
+    - _DistortMaskTexC: 0
+    - _DistortMaskTexCV: 0
+    - _DistortMaskTexR: 0
+    - _DistortNormalTex: 1
+    - _DistortRemap: 0
+    - _DistortTexAR: 1
+    - _DistortTex_Uspeed: 0
+    - _DistortTex_Vspeed: 0
+    - _Dst: 10
+    - _DstBlend: 0
+    - _FNLfanxiangkaiguan: 0
+    - _Face: 1
+    - _Fail: 0
+    - _Float0: 0
+    - _Float1: 0
+    - _Float10: 0
+    - _Float11: 0
+    - _Float12: 0
+    - _Float13: 0
+    - _Float14: 0.1
+    - _Float15: 0
+    - _Float16: 0
+    - _Float17: 0
+    - _Float19: 1
+    - _Float2: 0
+    - _Float20: 1
+    - _Float22: 1
+    - _Float27: 0
+    - _Float3: 0
+    - _Float30: 0
+    - _Float4: 0
+    - _Float5: 0
+    - _Float6: 1
+    - _Float7: 0
+    - _Float8: 1
+    - _Float9: 0
+    - _FrenePower: 0.05
+    - _Frenel: 1
+    - _FrenelPower: 2.51
+    - _Fresnel: -1.07
+    - _FresnelONE: 1
+    - _FresnelOp: 1
+    - _FresnelOpPower: 1
+    - _Fresnel_intensity: 0.94
+    - _Fresnel_opacity: 0.45
+    - _GampOne: 1
+    - _Gloss: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HighLine: 3.42
+    - _IfAddTex: 0
+    - _IfAddTexAlpha: 0
+    - _IfAddTexColor: 1
+    - _IfCubemap: 0
+    - _IfCustomLight: 0
+    - _IfDissolveColor: 1
+    - _IfDissolveOffsetC: 0
+    - _IfDissolvePlus: 0
+    - _IfFNLAlpha: 0
+    - _IfFlowmap: 0
+    - _IfMaskColor: 0
+    - _IfMaskPlusTex: 0
+    - _IfNormalDistort: 0
+    - _IfPara: 0
+    - _IfStaticNormal: 0
+    - _IfVAT: 0
+    - _Light: 1
+    - _LightFrenel: 1
+    - _LightFresnelPower: 4.52
+    - _LightScale: 0
+    - _MainAlpha: 1
+    - _MainOffsetUC1: 0
+    - _MainOffsetUC2: 0
+    - _MainOffsetVC1: 0
+    - _MainOffsetVC2: 1
+    - _MainTexUVS: 0
+    - _MainTex_Uspeed: 0
+    - _MainTex_Vspeed: 0
+    - _MainTex_ar: 0
+    - _MainTex_rotat: 0
+    - _MaintexC: 0
+    - _MaintexCV: 0
+    - _MaskAlphaRA: 1
+    - _MaskC: 0
+    - _MaskCV: 0
+    - _MaskOffsetUC1: 0
+    - _MaskOffsetUC2: 2
+    - _MaskOffsetVC1: 0
+    - _MaskOffsetVC2: 3
+    - _MaskPlusAR: 1
+    - _MaskPlusC: 0
+    - _MaskPlusCV: 0
+    - _MaskPlusR: 0
+    - _MaskPlusUspeed: 0
+    - _MaskPlusVspeed: 0
+    - _MaskTex: 1
+    - _MaskTexUVS: 0
+    - _Mask_U_Speed: 0
+    - _Mask_Uspeed: 0
+    - _Mask_V_Speed: 0
+    - _Mask_Vspeed: 0
+    - _Mask_rotat: 0
+    - _Mask_scale: 1
+    - _Metallic: 0
+    - _Mode: 0
+    - _NP: 0
+    - _NQOff: 0
+    - _NiuQuPower: 0
+    - _NiuQu_Opacity: 0
+    - _NoTile: 0
+    - _NormalScale: 0
+    - _NormalTexC: 0
+    - _NormalTexCV: 0
+    - _NormalTex_Rotat: 0
+    - _NormalTex_Uspeed: 0
+    - _NormalTex_Vspeed: 0
+    - _Npower: 2.7
+    - _ORuv: 0
+    - _OcclusionStrength: 1
+    - _Opacity: 1.21
+    - _OutLinePower: 0
+    - _PanUV: 0
+    - _Parallax: 0.02
+    - _ParticleVAT: 0
+    - _Pass: 0
+    - _PosGamp: 1
+    - _REFPOwer: 4.4
+    - _Re_intensity: 0.05
+    - _Reference: 0
+    - _RongJieON: 0
+    - _RongJieOP: 0
+    - _RongJieQieNO: 0
+    - _RongJieZhi: 0
+    - _Rotator: 0
+    - _Scr: 5
+    - _ScreenAsMain: 0
+    - _SelfAlpha: 1
+    - _SelfUV: 0
+    - _Smooth: 0
+    - _Smoothness: 0
+    - _SmoothnessTextureChannel: 0
+    - _Snow: 0
+    - _SnowVetexPower: 0
+    - _Soft1: 1
+    - _SoftParticle: 1
+    - _SoftPower: 1
+    - _Specular: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _StaticNormalOffset: 0
+    - _StaticNormalScale: 0
+    - _StencilStyle: 0
+    - _TextureAlpha: 0
+    - _ToggleSwitch0: 0
+    - _ToggleSwitch1: 0
+    - _ToggleSwitch10: 0
+    - _ToggleSwitch11: 0
+    - _ToggleSwitch2: 0
+    - _ToggleSwitch3: 0
+    - _ToggleSwitch4: 0
+    - _ToggleSwitch5: 0
+    - _ToggleSwitch6: 0
+    - _ToggleSwitch7: 0
+    - _ToggleSwitch8: 0
+    - _ToggleSwitch8ff: 0
+    - _ToggleSwitch9: 0
+    - _USpeed: 0
+    - _UVSec: 0
+    - _UspeedNiuqu: 0
+    - _VATFrameC1: 1
+    - _VATFrameC2: 4
+    - _VATFrameFactor: 0
+    - _VATTime: 0
+    - _VPan_U: 0
+    - _VPan_V: 0
+    - _VSpeed: 0
+    - _VSpeedNiuqu: 0
+    - _VTOAR: 1
+    - _VTOC: 0
+    - _VTOCV: 0
+    - _VTOFactor: 0
+    - _VTOFactorC1: 1
+    - _VTOFactorC2: 4
+    - _VTOMaskAR: 1
+    - _VTOMaskC: 0
+    - _VTOMaskCV: 0
+    - _VTOMaskR: 0
+    - _VTOR: 0
+    - _VTORemap: 0
+    - _VTOTexExp: 1
+    - _VTOTex_Uspeed: 0
+    - _VTOTex_Vspeed: 0
+    - _VerTexOffest: 0
+    - _ZWrite: 1
+    - _Ztest: 4
+    - _Zwrite: 0
+    - __dirty: 1
+    - _cupemapspower: 1
+    - _dissPoweror: 0
+    - _disslo: 0
+    - _fnl_power: 1
+    - _fnl_sacle: 0
+    - _op: 1.64
+    - _qubaohedu: 0
+    - _screenVTOon: 0
+    - _softFacotr: 1
+    - _soft_sting: 0
+    - _softback: 0
+    - _sot_sting_A: 0
+    m_Colors:
+    - _AddTexColor: {r: 0, g: 0, b: 0, a: 0}
+    - _AddTexRefine: {r: 1, g: 1, b: 2, a: 0}
+    - _BackFaceColor: {r: 1, g: 1, b: 1, a: 0}
+    - _Basecolor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    - _Color: {r: 0.2713994, g: 0.23251157, b: 0.5188679, a: 1}
+    - _Color0: {r: 1, g: 0.5832003, b: 0, a: 1}
+    - _Color1: {r: 1, g: 1, b: 1, a: 1}
+    - _CrackLight: {r: 1.96642, g: 1.0241771, b: 2.6082377, a: 1}
+    - _DIssloveColor: {r: 1, g: 1, b: 1, a: 1}
+    - _DepthColor: {r: 0, g: 0, b: 0, a: 0}
+    - _DiffuseCOloer: {r: 0.113839895, g: 1.1073517, b: 2.6390157, a: 1}
+    - _DiffuseColor: {r: 0.8845768, g: 0.5518868, b: 1, a: 1}
+    - _Dir: {r: 0, g: 0, b: 0, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FreCOlor: {r: 1.264501, g: 0.74355906, b: 2.9742362, a: 1}
+    - _FreColor: {r: 1, g: 0.71511966, b: 0.5896226, a: 1}
+    - _FreiColor: {r: 1, g: 0.6950364, b: 0.0990566, a: 0}
+    - _FreiColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _Fresnecolor: {r: 1, g: 0.4783347, b: 0, a: 1}
+    - _Fresnel_color: {r: 0.6226415, g: 0.3196221, b: 0.085172676, a: 1}
+    - _GampColor: {r: 0.1981132, g: 0.12216981, b: 0, a: 1}
+    - _Lightcolor: {r: 0.46226418, g: 0.24262296, b: 0.10684408, a: 1}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MainTexRefine: {r: 1, g: 1, b: 2, a: 0}
+    - _OutLineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SnorColor: {r: 0, g: 0, b: 0, a: 0.59607846}
+    - _TexCenter: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector0: {r: 0, g: 0, b: 0, a: 0}
+    - _VertexPower: {r: 1, g: 1, b: 1, a: 0}
+    - _fnl_color: {r: 1, g: 1, b: 1, a: 0}
