@@ -11,7 +11,7 @@ public class RPSEndGameManager : MonoBehaviour
     void Start()
     {
         RPSCore.instance.EndGameMaster.AddListener(delegate { StartCoroutine(SlowDownAnimation()); });
-        RPSCore.instance.CompDeath.AddListener(PlayPlayerWinTimeline);
+        RPSCore.instance.CompDeath.AddListener(delegate { Invoke("PlayPlayerWinTimeline", 0.8f); }) ;
         RPSCore.instance.PlayerDeath.AddListener(PlayCompWinTimeline);
     }
 

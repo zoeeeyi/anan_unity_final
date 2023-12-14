@@ -22,7 +22,6 @@ Material:
   - _DISTORTTEXAR_ON
   - _FACE_Y
   - _FRENEL_ON
-  - _GAMPONE_ON
   - _IFADDTEXCOLOR_ON
   - _IFDISSOLVECOLOR_ON
   - _MAINTEXUVS_NORMAL
@@ -245,13 +244,13 @@ Material:
     - _Face: 1
     - _Fail: 0
     - _Frenel: 1
-    - _FrenelPower: 2
-    - _GampOne: 1
-    - _Gloss: 0
+    - _FrenelPower: 1.25
+    - _GampOne: 0
+    - _Gloss: 3.38
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _HighLine: 1
+    - _HighLine: 0.92
     - _IfAddTex: 0
     - _IfAddTexAlpha: 0
     - _IfAddTexColor: 1
@@ -325,7 +324,7 @@ Material:
     - _SelfAlpha: 1
     - _SelfUV: 0
     - _SmoothnessTextureChannel: 0
-    - _Specular: -0.45
+    - _Specular: 0.37
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StaticNormalOffset: 0
@@ -371,11 +370,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DIssloveColor: {r: 1, g: 1, b: 1, a: 1}
     - _DepthColor: {r: 0, g: 0, b: 0, a: 0}
-    - _DiffuseCOloer: {r: 1.9809395, g: 1.4606915, b: 1.2614473, a: 1}
+    - _DiffuseCOloer: {r: 1.8540423, g: 1.2764785, b: 1.0564543, a: 1}
     - _Dir: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnecolor: {r: 1, g: 0.28773582, b: 0.33567652, a: 1}
-    - _GampColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Fresnecolor: {r: 0.44320825, g: 0.7576409, b: 1.7795485, a: 1}
+    - _GampColor: {r: 2.1387959, g: 1.4124123, b: 1.339774, a: 1}
     - _Lightcolor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _MainColor: {r: 1.319508, g: 1.319508, b: 1.319508, a: 1}
     - _MainTexRefine: {r: 1, g: 1, b: 2, a: 0}

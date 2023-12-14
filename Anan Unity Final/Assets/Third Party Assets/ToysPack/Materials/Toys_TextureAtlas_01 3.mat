@@ -19,10 +19,11 @@ Material:
   - _FACEFILP_ON
   - _FRENEL_ON
   - _FRESNELOP_ON
-  - _LIGHTFRENEL_ON
-  - _LIGHT_ON
   - _POSGAMP_ON
+  - _RONGJIEON_ON
+  - _RONGJIEQIENO_ON
   - _SELFALPHA_ON
+  - _SELFUV_ON
   - _SOFTPARTICLE_ON
   - _VEMASK_ON
   m_LightmapFlags: 4
@@ -195,7 +196,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DiffuseCOloer: {r: 1.0509921, g: 1.0788757, b: 1.5157166, a: 1}
+    - _DiffuseCOloer: {r: 1.7000332, g: 1.808744, b: 3.8017623, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnecolor: {r: 0, g: 0.62903214, b: 1, a: 1}
     - _GampColor: {r: 0.29369885, g: 0.4764163, b: 0.8301887, a: 1}

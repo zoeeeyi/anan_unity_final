@@ -141,11 +141,11 @@ Material:
     - _DstBlend: 0
     - _FaceFilp: 1
     - _Frenel: 1
-    - _FrenelPower: 1.28
+    - _FrenelPower: 1.57
     - _FresnelOp: 1
     - _FresnelOpPower: 0
     - _GampOne: 1
-    - _Gloss: -0.1
+    - _Gloss: -0.07
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -179,7 +179,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SoftParticle: 1
     - _SoftPower: 1
-    - _Specular: 0.21
+    - _Specular: 0.58
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _TextureAlpha: 0
@@ -194,10 +194,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _DiffuseCOloer: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    - _DiffuseCOloer: {r: 1.7781606, g: 0.76158947, b: 0.92998874, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Fresnecolor: {r: 1, g: 0.9118085, b: 0.5518868, a: 1}
-    - _GampColor: {r: 1.1486983, g: 0.31273463, b: 0.39279595, a: 1}
+    - _Fresnecolor: {r: 2.828427, g: 1.6415969, b: 2.0965064, a: 1}
+    - _GampColor: {r: 0.6698113, g: 0.26173124, b: 0.15418297, a: 1}
     - _Lightcolor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _OutLineColor: {r: 9.51876, g: 9.51876, b: 9.51876, a: 1}
     - _VertexPower: {r: 1, g: 1, b: 1, a: 0}
