@@ -2,25 +2,53 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: New Material 163
   m_Shader: {fileID: 4800000, guid: 10cb98d93a8d8c34b98b8b885a1a92fa, type: 3}
-  m_ShaderKeywords: _CADDTEXUVT_ON _DISSLOVEOFF_ON _DISSLOVEUVORPOWER_ON _DISSOLVEAR_ON
-    _DISSOLVEPLUSAR_ON _DISSOLVETEXUVS_NORMAL _DISTORTADDTEX_ON _DISTORTMASKTEXAR_ON
-    _DISTORTTEXAR_ON _FACE_Y _FRENEL_ON _FRESNELONE_ON _FRESNELOP_ON _GAMPONE_ON
-    _IFADDTEXCOLOR_ON _IFDISSOLVECOLOR_ON _LIGHTFRENEL_ON _LIGHT_ON _MAINTEXUVS_NORMAL
-    _MASKALPHARA_ON _MASKPLUSAR_ON _MASKTEXUVS_NORMAL _MASKTEX_ON _POSGAMP_ON _SELFALPHA_ON
-    _SOFT1_ON _SOFTPARTICLE_ON _VTOAR_ON _VTOMASKAR_ON
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _CADDTEXUVT_ON
+  - _DISSLOVEOFF_ON
+  - _DISSLOVEUVORPOWER_ON
+  - _DISSOLVEAR_ON
+  - _DISSOLVEPLUSAR_ON
+  - _DISSOLVETEXUVS_NORMAL
+  - _DISTORTADDTEX_ON
+  - _DISTORTMASKTEXAR_ON
+  - _DISTORTTEXAR_ON
+  - _FACE_Y
+  - _FRENEL_ON
+  - _FRESNELONE_ON
+  - _FRESNELOP_ON
+  - _GAMPONE_ON
+  - _IFADDTEXCOLOR_ON
+  - _IFDISSOLVECOLOR_ON
+  - _LIGHTFRENEL_ON
+  - _LIGHT_ON
+  - _MAINTEXUVS_NORMAL
+  - _MASKALPHARA_ON
+  - _MASKPLUSAR_ON
+  - _MASKTEXUVS_NORMAL
+  - _MASKTEX_ON
+  - _POSGAMP_ON
+  - _SELFALPHA_ON
+  - _SOFT1_ON
+  - _SOFTPARTICLE_ON
+  - _VTOAR_ON
+  - _VTOMASKAR_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -280,6 +308,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AddTexAR: 0
     - _AddTexBlend: 0
@@ -563,17 +592,17 @@ Material:
     - _AddTexRefine: {r: 1, g: 1, b: 2, a: 0}
     - _BackFaceColor: {r: 1, g: 1, b: 1, a: 0}
     - _Basecolor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
-    - _Color: {r: 0.2713994, g: 0.23251157, b: 0.5188679, a: 1}
+    - _Color: {r: 0.23137252, g: 0.46728566, b: 0.5176471, a: 1}
     - _Color0: {r: 1, g: 0.5832003, b: 0, a: 1}
     - _Color1: {r: 1, g: 1, b: 1, a: 1}
-    - _CrackLight: {r: 1.96642, g: 1.0241771, b: 2.6082377, a: 1}
+    - _CrackLight: {r: 0.98955774, g: 1.0919379, b: 2.0367594, a: 1}
     - _DIssloveColor: {r: 1, g: 1, b: 1, a: 1}
     - _DepthColor: {r: 0, g: 0, b: 0, a: 0}
     - _DiffuseCOloer: {r: 0.113839895, g: 1.1073517, b: 2.6390157, a: 1}
-    - _DiffuseColor: {r: 0.8845768, g: 0.5518868, b: 1, a: 1}
+    - _DiffuseColor: {r: 0.495283, g: 0.7497875, b: 1, a: 1}
     - _Dir: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FreCOlor: {r: 1.264501, g: 0.74355906, b: 2.9742362, a: 1}
+    - _FreCOlor: {r: 0.74745184, g: 1.847121, b: 2.974236, a: 1}
     - _FreColor: {r: 1, g: 0.71511966, b: 0.5896226, a: 1}
     - _FreiColor: {r: 1, g: 0.6950364, b: 0.0990566, a: 0}
     - _FreiColor1: {r: 1, g: 1, b: 1, a: 1}
@@ -589,3 +618,4 @@ Material:
     - _Vector0: {r: 0, g: 0, b: 0, a: 0}
     - _VertexPower: {r: 1, g: 1, b: 1, a: 0}
     - _fnl_color: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
