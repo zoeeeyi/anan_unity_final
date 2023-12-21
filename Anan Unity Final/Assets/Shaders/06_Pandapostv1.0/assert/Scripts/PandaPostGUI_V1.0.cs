@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEditor;
 
-
+#if UNITY_EDITOR
 //创建一个GUI类
 public class PostGUI : ShaderGUI
 {
@@ -1305,3 +1305,4 @@ public class PostGUI : ShaderGUI
 
     }
 
+#endif

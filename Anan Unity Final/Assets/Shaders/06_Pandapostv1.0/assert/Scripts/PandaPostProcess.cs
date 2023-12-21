@@ -4,18 +4,18 @@ using PandaTitle;
 [ExecuteInEditMode]
 public class PandaPostProcess : MonoBehaviour
 {
-	[DisplayName("后期材质球球")] public Material PostProcessMat;
+	public Material PostProcessMat;
 
-	[DisplayName("像素剔除程度")] [Range(0, 1)] public float StepFactor = 0.5F;
-    [DisplayName("总透明度")] [Range(0, 1)] public float MainAlpha=1F;
-	[DisplayName("径向模糊强度")] [Range(0, 1)] public float BlurFactor;
-	[DisplayName("UV拉伸强度")] [Range(0, 4)] public float LineUVScale;
-	[DisplayName("色散强度")] [Range(0, 1.5F)] public float Chromatic;
-	[DisplayName("振频")] [Range(0, 1)] public float Frequency;
-	[DisplayName("振幅")] [Range(0, 1)] public float Amplitude;
-	[DisplayName("黑边框宽度")] [Range(1, 3)] public float VignettePower=1.5F;
-	[DisplayName("黑边框强度")] [Range(0, 3)] public float VignetteScale= 1.5F;
-	[DisplayName("播放速度")] [Range(0, 2)] public float TimeScale = 1F;
+	[Range(0, 1)] public float StepFactor = 0.5F;
+    [Range(0, 1)] public float MainAlpha=1F;
+	[Range(0, 1)] public float BlurFactor;
+	[Range(0, 4)] public float LineUVScale;
+	[Range(0, 1.5F)] public float Chromatic;
+	[Range(0, 1)] public float Frequency;
+	[Range(0, 1)] public float Amplitude;
+	[Range(1, 3)] public float VignettePower=1.5F;
+	[Range(0, 3)] public float VignetteScale= 1.5F;
+	[Range(0, 2)] public float TimeScale = 1F;
 	private void Awake()
 	{
 		if( PostProcessMat == null )
